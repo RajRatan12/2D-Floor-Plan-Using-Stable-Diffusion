@@ -1,33 +1,22 @@
 # Diffusion-Models-for-floor-plan-drafting
-Code for my Bachelor Thesis: _"Using Diffusion Models to improve the process of floor plan drafting”_
+"Using Diffusion Models to improve the process of floor plan drafting”_
 ## Project Description
 
-This repository contains the code developed for my Bachelor’s Thesis, conducted at the *DFKI Osnabrück (German Research Center for Artificial Intelligence)* as part of my Bachelor’s degree at the *University of Osnabrück, Germany*. The project focused on exploring the application of diffusion models in floor plan drafting and assessing their potential to improve the drafting process.
+The project focused on exploring the application of diffusion models in floor plan drafting and assessing their potential to improve the drafting process.
 
-## 📖 Table of Contents
-  - [❓ Why?](#-why)
-  - [✴️ Model](#model)
-  - [✨ Features](#-features)
-  - [💻 Usage](#-usage)
-  - [💾 Structure](#-structure)
-  - [📎 License](#-license)
-  <p align="right">(<a href="#top">back to top</a>)</p>
-
-## ❓ Why?
-SStable Diffusion has demonstrated impressive capabilities in generating realistic images. However, it struggles to produce coherent architectural floor plans, as it is not tailored for this specific domain. This project aims to address that limitation by fine-tuning SD-v1.5 with LoRA, resulting in a specialized tool that enables users to generate architectural floor plans adhering to specific constraints.<br/> 
+Stable Diffusion has demonstrated impressive capabilities in generating realistic images. However, it struggles to produce coherent architectural floor plans, as it is not tailored for this specific domain. This project aims to address that limitation by fine-tuning SD-v1.5 with LoRA, resulting in a specialized tool that enables users to generate architectural floor plans adhering to specific constraints.<br/> 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-## ✴️ Model <a name="model"></a>
+## ✴️ Model 
 The weights for the LoRA module with the best performance (L1 loss, 250 epochs, rank 4) can be downloaded from: https://huggingface.co/maria26/Floor_Plan_LoRA <br/> 
 <br/> 
-and then loaded on top of SD-v1.5: https://sd-legacy/stable-diffusion-v1-5<br/> 
+and then loaded on top of SD-v1.5: https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5/tree/main<br/> 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## ✨ Features
 **Training:** Train your own LoRA model on a different labeled dataset of floor plans. <br/>
 **Experimentation:** Fine-tune a LoRA module using the provided dataset and explore various hyperparameter settings. <br/>
-**User Interface:** Interact with your model through one of two available UIs: a text-based interface for freeform prompts or a selection-based interface with preset options for customizing your floor plan.
 <br/>
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -41,16 +30,11 @@ After this, you can train your own LoRA module on the provided floor plan datase
  ```
   python3 run_script.py 
   ```
-If you want to use my fine-tuned model, it is already linked to the interface.
 <br/>
-<br/>
-You can also access the web interface already linked to the fine-tuned model by running the code below. You can also link the interface to your model by modifying the path to the LoRA safe-tensors in `app.py`.😊
 <br/>
  ```
   python3 app.py 
   ```
-You can link `app.py` to your preferred interface (text or selection input). By default, it is set to the selection input, but you can adjust the corresponding line in the `home()` function as needed.
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## 💾 Structure
 <!-- Project Structure -->
@@ -130,18 +114,3 @@ You can link `app.py` to your preferred interface (text or selection input). By 
         └───run_script.py                    #run file
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
-## 📎 License
-Copyright 2024 Maria Oprea
-
-Licensed under the MIT License;
-you may not use this file except in compliance with the License.
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.<br/>
-<p align="right">(<a href="#top">back to top</a>)</p>
-# 2D-Floor-Plan-Using-Stable-Diffusion
